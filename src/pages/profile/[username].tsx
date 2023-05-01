@@ -47,14 +47,14 @@ const ProfilePage: NextPage<Props> = ({ username }: Props) => {
               height={200}
             />
           </div>
-          <div className="flex flex-[2] flex-col justify-between gap-3 ">
+          <div className="flex flex-[2] flex-col justify-between gap-3 items-center md:items-start">
             <div className="flex flex-col items-center md:items-start">
               <h3 className="text-center text-2xl font-medium  text-gray-900 ">
                 {user.name}
               </h3>
               <p className="  ">@{user.username}</p>
             </div>
-            <Link target="_blank" href={(user.githubURL as string) || ""}>
+            <Link className="items-center" target="_blank" href={(user.githubURL as string) || ""}>
               {user.githubURL && <MdiGithub className="h-8 w-8" />}
             </Link>
           </div>

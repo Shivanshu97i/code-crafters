@@ -50,15 +50,15 @@ function Navbar() {
                   </label>
                   <ul
                     tabIndex={0}
-                    className="dropdown-content menu rounded-box menu-compact w-40 bg-base-100 p-2 shadow"
+                    className="dropdown-content menu rounded-box menu-compact w-36 bg-base-100 p-2 shadow"
                   >
                     <li>
-                      <Link href={`/profile/${session.user.username || ""}`}>
+                      <Link className="pr-16" href={`/profile/${session.user.username || ""}`}>
                         Profile
                       </Link>
                     </li>
                     <li>
-                      <button onClick={() => void signOut()}>Sign out</button>
+                      <button className="pr-14" onClick={() => void signOut()}>Sign out</button>
                     </li>
                   </ul>
                 </div>
